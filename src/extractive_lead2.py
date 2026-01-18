@@ -1,7 +1,6 @@
 import re
 
 def split_sentences(text: str):
-    # Simple sentence splitter (good enough for a demo)
     text = re.sub(r"\s+", " ", text.strip())
     return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
 
